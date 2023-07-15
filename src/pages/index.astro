@@ -34,11 +34,14 @@ const data = await getData();
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="mb-2">
+	<main class="space-y-2">
+		<h1>
 			Welcome to <span class="text-gradient">Astro</span>
 		</h1>
-		<DataTable client:load columns={columns} data={data} />
+		<p>The "Amount" column should be rendering but is not.</p>
+		<div>
+			<DataTable client:load columns={columns} data={data} />
+		</div>
 	</main>
 </Layout>
 
